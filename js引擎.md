@@ -1,5 +1,4 @@
 
-
 - [JavaScript引擎](#javascript引擎)
 - [为了提高执行速度可以怎么写代码？](#为了提高执行速度可以怎么写代码)
 - [另一种可以在浏览器内运行的语言](#另一种可以在浏览器内运行的语言)
@@ -7,6 +6,7 @@
   - [垃圾回收](#垃圾回收)
 - [单线程](#单线程)
 - [js runtime](#js-runtime)
+
 ## JavaScript引擎
 
 >- 解释器和编译器
@@ -33,8 +33,8 @@ stackoverflow:无限嵌套的函数（递归）
 
 防止内存泄漏
 
-+ 事件监听器没有remove
-+ setinterval
+- 事件监听器没有remove
+- setinterval
 
 mark and sweep 机制
 
