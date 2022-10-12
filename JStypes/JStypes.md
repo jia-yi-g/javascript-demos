@@ -43,3 +43,4 @@
 ![Image](../typed.png)
 
 strong vs weak typed : **能否自动转换**
+
