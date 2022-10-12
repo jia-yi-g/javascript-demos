@@ -4,6 +4,8 @@
 - [闭包](#闭包)
   - [arguments对象](#arguments对象)
 - [IIFE](#iife)
+- [this关键词](#this关键词)
+- [context和scope](#context和scope)
 
 ## 执行上下文
 
@@ -68,3 +70,46 @@ func();
 类数组（使用array.from创建数组）
 
 ## IIFE
+
+## this关键词
+
+***this* is the object that the function is a property of**
+
+动态作用域，取决于调用的方式，箭头函数中，this的值取决于它的环境，他没有自己的this
+
+```
+const obj={
+  name:"B",
+  sing(){
+    return "lala"+this.name
+  },
+  singAgain(){
+    return this.sing() + "1"
+  }
+}
+obj.singAgain()
+```
+
+this的作用
+
+- 让对象获得他们的方法
+- 使代码减少重复，重复执行相同的代码
+
+>call(),apply(),bind()
+>
+>- call()和apply()就是调用函数
+>- bind()返回一个函数
+>- bind()在函数柯里化的应用
+>
+>```
+>function multy(a,b){
+>  return a*b
+>}
+>let multy2=multy.bind(this,2);
+>multy2(4)//输出8
+>```
+
+## context和scope
+
+- scope通常描述变量的可见性
+- context更关注某个函数是如何调用的
