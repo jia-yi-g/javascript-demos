@@ -9,7 +9,7 @@ for(var i=1;i<=5;i++){
 for (var i = 1; i <= 5; i++) {
   (function(j){setTimeout(function timer() {
     console.log(j);
-  }, j * 1000);})()
+  }, j * 1000);})(i)
 }
 //IIFE形成一个封闭作用域，并且有自己的变量
 //修改方法2使用块作用域（推荐）
