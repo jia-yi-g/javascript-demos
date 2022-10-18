@@ -6,6 +6,8 @@
 - [IIFE](#iife)
 - [this关键词](#this关键词)
 - [context和scope](#context和scope)
+- [箭头函数](#箭头函数)
+- [丢失this的解决方法](#丢失this的解决方法)
 
 ## 执行上下文
 
@@ -113,3 +115,17 @@ this的作用
 
 - scope通常描述变量的可见性
 - context更关注某个函数是如何调用的
+
+## 箭头函数
+
+>The arrow function doesn't have this and arguments in the current lexical environment, so it looks for them in the outer lexical environment.
+
+>If we want to return an object using Arrow function we should wrap it in braces like:
+>let AF = () => ({name:"jack"})
+>otherwise it will give you an error.
+
+## 丢失this的解决方法
+
+- 包装器，包装在另一个函数中
+- bind(注意，bind返回的是另一个对象)
+- 偏函数(bind的应用)
